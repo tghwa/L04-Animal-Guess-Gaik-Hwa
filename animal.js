@@ -3,11 +3,13 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 const Animal = ({ picture }) => {
     return (
         <View style={styles.container}>
-            <Image
-                source={picture}
-                style={styles.image}
-            />
-            <Text style={styles.question}>What animal is this?</Text>
+            <View style={styles.box}>
+                <Image
+                    source={picture}
+                    style={styles.image}
+                />
+                <Text style={styles.question}>What animal is this?</Text>
+            </View>
         </View>
     );
 };
@@ -17,10 +19,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 20,
     },
+    box: {
+        borderWidth: 2,
+        borderColor: 'black',
+        padding: 15,
+        alignItems: 'center',
+        backgroundColor: 'white',
+    },
     image: {
         width: 350,
         height: 250,
-        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: 'black',
         marginBottom: 10,
     },
     question: {
